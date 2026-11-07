@@ -24,7 +24,15 @@ Then open http://localhost:4326/. Any static host works (GitHub Pages, Netlify, 
 - Contact form composes an email to phil@pgcustommade.com in the visitor's mail app. Swap the submit handler for Formspree / Netlify Forms if Phil wants submissions without a mail client.
 - Structured data (LocalBusiness), Open Graph image, SVG favicon.
 
+## Positioning
+
+Contractor first: decks, pergolas and outdoor living, then remodels, built-ins and additions, with custom furniture as the third service. Calls to action are "Get a quote" / "Request a site visit" and the form is a quote request. Schema type is HomeAndConstructionBusiness.
+
 ## To confirm with Phil before launch
+
+- **Nevada contractor license.** If Phil holds an NSCB license, add the number near the footer and the quote form; it is the single biggest trust signal for a contractor site. If he does not, keep the copy as is (it never claims "licensed").
+- **Deck and remodel photos.** The only outdoor project photo on hand is the South Lake pergola; there are no deck, remodel or built-in photos at all, so the project grid currently leans on furniture and shop shots. Before/after deck rebuilds would transform the page.
+- Process copy (site visit, written quote and timeline, final walk-through) describes a standard contractor flow; confirm it matches how Phil works.
 
 - Project locations in captions are inferred from the testimonials (bed frame → Gardnerville, dining table → Stateline, pergola → South Lake Tahoe). Correct any that are wrong.
 - The four process steps are drafted from how the old site describes the work. Phil should check they match how he actually quotes and delivers.
