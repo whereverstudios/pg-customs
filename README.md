@@ -26,7 +26,7 @@ Then open http://localhost:4326/. Any static host works (GitHub Pages, Netlify, 
 
 ## Positioning
 
-Contractor first: decks, pergolas and outdoor living, then remodels, built-ins and additions, with custom furniture as the third service. Calls to action are "Get a quote" / "Request a site visit" and the form is a quote request. Schema type is HomeAndConstructionBusiness.
+Voice: "home projects done right" — the thing you have been meaning to do, Phil builds, rebuilds or fixes it himself. Contractor first: decks, pergolas and outdoor living, then remodels, built-ins and additions, with custom furniture as the third service. Calls to action are "Get a quote" / "Request a site visit" and the form is a quote request. Schema type is HomeAndConstructionBusiness.
 
 ## To confirm with Phil before launch
 
