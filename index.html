@@ -122,18 +122,42 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 .mobile-menu { display: none; }
 
 /* Hero */
-.hero { padding-top: clamp(40px, 7vw, 110px); padding-bottom: 0; }
-.hero .top { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); column-gap: 32px; row-gap: 32px; align-items: end; }
-.hero .eyebrow { grid-column: 1 / -1; display: flex; gap: 1.6em; flex-wrap: wrap; }
-.hero h1 { grid-column: 1 / span 9; max-width: 13.5ch; }
+.hero { position: relative; margin-top: -76px; padding: 0; min-height: min(100svh, 1040px); display: flex; align-items: flex-end; background: var(--walnut); color: var(--paper); overflow: hidden; isolation: isolate; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; background: var(--walnut) url("media/hero-poster.jpg") center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(26,23,20,.46) 0%, rgba(26,23,20,0) 30%),
+              linear-gradient(90deg, rgba(26,23,20,.42) 0%, rgba(26,23,20,.12) 50%, rgba(26,23,20,0) 100%),
+              linear-gradient(0deg, rgba(26,23,20,.86) 0%, rgba(26,23,20,.5) 36%, rgba(26,23,20,.08) 72%); }
+.hero .inner { width: 100%; padding-top: clamp(150px, 24vh, 240px); padding-bottom: clamp(28px, 4vw, 52px); display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); column-gap: 32px; row-gap: clamp(22px, 3vw, 40px); align-items: end; }
+.hero .eyebrow { grid-column: 1 / -1; display: flex; gap: 1.6em; flex-wrap: wrap; color: color-mix(in srgb, var(--paper) 72%, transparent); }
+.hero h1 { grid-column: 1 / span 9; max-width: 13.5ch; color: var(--paper); text-shadow: 0 1px 30px rgba(0,0,0,.18); }
 .hero .side { grid-column: 1 / span 5; display: grid; gap: 28px; }
+.hero .lede { color: color-mix(in srgb, var(--paper) 82%, transparent); }
 .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero .meta { grid-column: 8 / span 5; align-self: end; font-size: .9rem; color: var(--ink-2); display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; border-top: 1px solid var(--rule); padding-top: 16px; }
-.hero .meta dt { color: var(--ink-3); } .hero .meta dd { margin: 0; }
-.hero .photo { margin-top: clamp(44px, 6vw, 88px); position: relative; }
-.hero .photo .frame { aspect-ratio: 16 / 9; overflow: hidden; background: var(--walnut); }
-.hero .photo .frame img { width: 100%; height: 100%; object-fit: cover; }
-.hero .photo .mono { position: absolute; right: clamp(16px, 3vw, 40px); top: clamp(16px, 3vw, 40px); width: clamp(48px, 6vw, 84px); height: auto; opacity: .85; mix-blend-mode: screen; }
+.btn-ghost { border-color: rgba(238,235,228,.4); color: var(--paper); background: transparent; }
+.btn-ghost:hover { border-color: var(--paper); }
+.hero .meta { grid-column: 8 / span 5; align-self: end; font-size: .9rem; color: color-mix(in srgb, var(--paper) 80%, transparent); display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; border-top: 1px solid rgba(238,235,228,.22); padding-top: 16px; }
+.hero .meta dt { color: color-mix(in srgb, var(--paper) 52%, transparent); } .hero .meta dd { margin: 0; }
+.hero .meta .link { border-color: rgba(238,235,228,.35); } .hero .meta .link:hover { border-color: var(--paper); }
+.hero .strip { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid rgba(238,235,228,.18); padding-top: 14px; font-size: .82rem; color: color-mix(in srgb, var(--paper) 55%, transparent); }
+.hero .strip b { color: color-mix(in srgb, var(--paper) 82%, transparent); font-weight: 500; }
+.vid-toggle { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(238,235,228,.3); color: inherit; border-radius: 999px; padding: 7px 12px 7px 11px; font: inherit; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: border-color .2s, color .2s; }
+.vid-toggle:hover { border-color: var(--paper); color: var(--paper); }
+.vid-toggle svg { width: 9px; height: 9px; fill: currentColor; }
+.vid-toggle .on, .hero.paused .vid-toggle .off { display: inline-flex; align-items: center; gap: 8px; }
+.vid-toggle .off, .hero.paused .vid-toggle .on { display: none; }
+
+/* Nav over the hero video */
+.nav { transition: background .35s var(--ease), color .35s var(--ease), border-color .3s; }
+.nav.light { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; color: var(--paper); border-color: transparent; }
+.nav.light .brand .mark { filter: none; }
+.nav.light .brand .word small { color: color-mix(in srgb, var(--paper) 60%, transparent); }
+.nav.light ul a { color: color-mix(in srgb, var(--paper) 78%, transparent); } .nav.light ul a:hover { color: var(--paper); }
+.nav.light .cta .btn-ink { background: var(--paper); color: var(--ink); }
+.nav.light .cta .btn-ink:hover { background: #fff; }
+.nav.light .menu-btn { border-color: rgba(238,235,228,.4); }
+.nav.light .menu-btn span, .nav.light .menu-btn span::before, .nav.light .menu-btn span::after { background: var(--paper); }
+
 .cap { display: flex; justify-content: space-between; gap: 20px; padding-top: 14px; font-size: .85rem; color: var(--ink-3); border-top: 1px solid var(--rule); margin-top: 14px; }
 .cap b { font-weight: 500; color: var(--ink-2); }
 
@@ -279,14 +303,16 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 @media (max-width: 940px) {
   .nav ul, .nav .cta .btn { display: none; }
   .menu-btn { display: inline-flex; }
-  .mobile-menu { display: none; border-top: 1px solid var(--rule); padding: 8px 0 22px; }
+  .mobile-menu { display: none; border-top: 1px solid var(--rule); padding: 8px 0 22px; color: var(--ink); }
   .menu-open .mobile-menu { display: block; }
   .mobile-menu a { display: block; padding: 14px 0; font-family: var(--display); font-size: 1.6rem; border-bottom: 1px solid var(--rule); }
   .mobile-menu .btn { margin-top: 18px; font-family: var(--body); font-size: .95rem; display: inline-flex; border: 0; }
 }
 @media (max-width: 720px) {
   body { font-size: 1rem; }
-  .hero .photo .frame { aspect-ratio: 4 / 5; }
+  .hero { min-height: min(100svh, 900px); }
+  .hero .inner { padding-top: 140px; }
+  .hero .strip { flex-direction: column; align-items: flex-start; }
   .hero .side { grid-column: 1 / -1; }
   .facts ul { grid-template-columns: 1fr 1fr; }
   .facts li { padding: 18px 16px 18px 0; } .facts li + li { padding-left: 16px; }
@@ -346,31 +372,33 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 
 <main>
 
-  <section class="hero">
-    <div class="wrap">
-      <div class="top">
-        <p class="eyebrow"><span>Custom furniture &amp; woodwork</span><span>Carson Valley · Lake Tahoe</span></p>
-        <h1>Built by hand in Carson Valley. Made to outlast the house.</h1>
-        <div class="side">
-          <p class="lede">Bed frames, tables, decks and pergolas, hand-assembled by Phil Gielow on his family's ranch in Gardnerville from lumber sourced around Lake Tahoe.</p>
-          <div class="actions">
-            <a class="btn btn-ink" href="#contact">Start a project</a>
-            <a class="btn btn-line" href="#work">See the work</a>
-          </div>
+  <section class="hero" id="home">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="media/hero-loop.mp4" type="video/mp4" media="(min-width: 760px)">
+      <source src="media/hero-loop-small.mp4" type="video/mp4">
+    </video>
+    <div class="wrap inner">
+      <p class="eyebrow"><span>Custom furniture &amp; woodwork</span><span>Carson Valley · Lake Tahoe</span></p>
+      <h1>Built by hand in Carson Valley. Made to outlast the house.</h1>
+      <div class="side">
+        <p class="lede">Bed frames, tables, decks and pergolas, hand-assembled by Phil Gielow on his family's ranch in Gardnerville from lumber sourced around Lake Tahoe.</p>
+        <div class="actions">
+          <a class="btn btn-paper" href="#contact">Start a project</a>
+          <a class="btn btn-ghost" href="#work">See the work</a>
         </div>
-        <dl class="meta">
-          <dt>Shop</dt><dd>The Gielow family ranch, Gardnerville, NV</dd>
-          <dt>Serving</dt><dd>Carson Valley, the Tahoe Basin and Northern Nevada</dd>
-          <dt>Reach Phil</dt><dd><a class="link" href="tel:+17757210590">(775) 721-0590</a></dd>
-        </dl>
       </div>
-      <figure class="photo reveal">
-        <div class="frame">
-          <img src="media/pergola-hot-tub.jpg" alt="Redwood pergola with a slatted privacy screen built over a hot tub, with four cushioned chairs in front, under tall pines" width="2400" height="1350" fetchpriority="high">
-        </div>
-        <img class="mono" src="media/logo-white.png" alt="" aria-hidden="true">
-        <figcaption class="cap"><span><b>Pergola and privacy screen</b> built over a hot tub</span><span>South Lake Tahoe, CA</span></figcaption>
-      </figure>
+      <dl class="meta">
+        <dt>Shop</dt><dd>The Gielow family ranch, Gardnerville, NV</dd>
+        <dt>Serving</dt><dd>Carson Valley, the Tahoe Basin and Northern Nevada</dd>
+        <dt>Reach Phil</dt><dd><a class="link" href="tel:+17757210590">(775) 721-0590</a></dd>
+      </dl>
+      <div class="strip">
+        <span><b>From Phil's film.</b> The ranch, the shop and the pieces, Carson Valley, Nevada.</span>
+        <button class="vid-toggle" id="vid-toggle" type="button" aria-controls="hero-video">
+          <span class="on"><svg viewBox="0 0 10 10" aria-hidden="true"><rect x="1" y="1" width="3" height="8"/><rect x="6" y="1" width="3" height="8"/></svg>Pause film</span>
+          <span class="off"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z"/></svg>Play film</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -405,8 +433,8 @@ section { padding-block: clamp(72px, 10vw, 150px); }
           <figcaption class="cap"><span><b>Platform bed</b>, fresh off the bench</span><span>In the shop</span></figcaption>
         </figure>
         <figure class="piece p4 reveal">
-          <div class="frame"><img src="media/phil-table.jpg" alt="Phil standing over a slat-top dining table he delivered to a client's home" loading="lazy" width="1800" height="1050"></div>
-          <figcaption class="cap"><span><b>Slat-top dining table</b>, delivered and set</span><span>Northern Nevada</span></figcaption>
+          <div class="frame"><img src="media/pergola-hot-tub.jpg" alt="Redwood pergola with a slatted privacy screen built over a hot tub, with four cushioned chairs in front, under tall pines" loading="lazy" width="2400" height="1350"></div>
+          <figcaption class="cap"><span><b>Pergola and privacy screen</b> built over a hot tub</span><span>South Lake Tahoe, CA</span></figcaption>
         </figure>
         <figure class="piece p5 reveal">
           <div class="frame"><img src="media/branding-iron.jpg" alt="A gloved hand holding the PG horseshoe branding iron in open flame" loading="lazy" width="1800" height="1047"></div>
@@ -606,18 +634,32 @@ section { padding-block: clamp(72px, 10vw, 150px); }
   root.classList.add('js');
 
   // Sticky nav state
-  var nav = d.querySelector('.nav');
-  var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 24); };
-  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+  var nav = d.querySelector('.nav'), hero = d.querySelector('.hero');
+  var onScroll = function () {
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 24);
+    nav.classList.toggle('light', y < hero.offsetHeight - 110 && !root.classList.contains('menu-open'));
+  };
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll);
+
+  // Hero film: respect reduced motion, cope with blocked autoplay, offer a pause control
+  var vid = d.getElementById('hero-video'), vt = d.getElementById('vid-toggle');
+  var setPaused = function (p) { hero.classList.toggle('paused', p); vt.setAttribute('aria-pressed', p ? 'true' : 'false'); };
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { vid.removeAttribute('autoplay'); vid.pause(); setPaused(true); }
+  else { var pr = vid.play(); if (pr && pr.catch) pr.catch(function () { setPaused(true); }); }
+  vt.addEventListener('click', function () {
+    if (vid.paused) { vid.play(); setPaused(false); } else { vid.pause(); setPaused(true); }
+  });
 
   // Mobile menu
   var btn = d.querySelector('.menu-btn');
   btn.addEventListener('click', function () {
     var open = root.classList.toggle('menu-open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    onScroll();
   });
   d.querySelectorAll('.mobile-menu a').forEach(function (a) {
-    a.addEventListener('click', function () { root.classList.remove('menu-open'); btn.setAttribute('aria-expanded', 'false'); });
+    a.addEventListener('click', function () { root.classList.remove('menu-open'); btn.setAttribute('aria-expanded', 'false'); onScroll(); });
   });
 
   // Reveal on scroll (content is visible without JS; this only adds the entrance)

@@ -19,6 +19,7 @@ Then open http://localhost:4326/. Any static host works (GitHub Pages, Netlify, 
   hero → facts strip → selected work → what we build → process + film → Phil → client quotes → start a project.
 - Copy rewritten in a plainer voice around the true story: three generations on the Gielow ranch, Tahoe-sourced lumber, hand-assembled, Phil does it all himself.
 - All photos are Phil's own stills from the existing site and film, re-exported for the web. The horseshoe mark is the existing white PNG (inverted with CSS on light backgrounds).
+- Hero: the old site's own Squarespace background loop ("PG Customs - Website Loop.mp4", 35 s) pulled from its HLS stream and re-encoded muted: `media/hero-loop.mp4` (1440w, ~5 MB) for desktop, `media/hero-loop-small.mp4` (960w, ~2 MB) under 760px, `media/hero-poster.jpg` as the first frame. Pauses itself under prefers-reduced-motion or when autoplay is blocked; visitors get a Pause/Play control. The 1080p source sits in `media/src/` (gitignored).
 - Film: click-to-play YouTube embed (`XnMLmF_CteQ`), poster first so nothing loads until asked.
 - Contact form composes an email to phil@pgcustommade.com in the visitor's mail app. Swap the submit handler for Formspree / Netlify Forms if Phil wants submissions without a mail client.
 - Structured data (LocalBusiness), Open Graph image, SVG favicon.
