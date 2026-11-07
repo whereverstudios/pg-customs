@@ -9,6 +9,8 @@ A single self-contained `index.html` with no build step; photos live in `media/`
 node serve.mjs 4326
 ```
 
+Live preview: https://whereverstudios.github.io/pg-customs/ (GitHub Pages from `main`, root). When the real domain moves here, update the `og:image` URL in `index.html` to pgcustommade.com.
+
 Then open http://localhost:4326/. Any static host works (GitHub Pages, Netlify, Squarespace replacement, etc.): upload `index.html` and `media/`.
 
 ## What changed from the Squarespace site
