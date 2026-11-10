@@ -17,7 +17,7 @@
 <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,700&display=swap">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -104,10 +104,9 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: color-mix(in srgb, var(--paper) 86%, transparent); backdrop-filter: saturate(140%) blur(14px); -webkit-backdrop-filter: saturate(140%) blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s; }
 .nav.scrolled { border-color: var(--rule); }
 .nav .bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand .mark { width: 36px; height: 36px; filter: invert(1); opacity: .92; }
-.brand .word { font-family: var(--display); font-size: 1.4rem; font-weight: 500; letter-spacing: .005em; line-height: 1; }
-.brand .word small { display: block; white-space: nowrap; font-family: var(--body); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); margin-top: 5px; font-weight: 600; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand .mark { width: 38px; height: 38px; filter: invert(1); opacity: .92; }
+.brand .word { font-family: var(--body); font-style: italic; font-weight: 700; font-size: 1.9rem; letter-spacing: -0.02em; line-height: 1; padding-right: .12em; white-space: nowrap; transform: translateY(-2px); }
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(18px, 2.4vw, 36px); font-size: .92rem; font-weight: 500; }
 .nav ul a { position: relative; white-space: nowrap; padding: .4em 0; color: var(--ink-2); transition: color .2s; }
 .nav ul a:hover { color: var(--ink); }
@@ -150,7 +149,6 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 /* Nav over the hero video */
 .nav { transition: background .35s var(--ease), color .35s var(--ease), border-color .3s; }
 .nav.light { background: linear-gradient(180deg, rgba(26,23,20,.45), rgba(26,23,20,0)); backdrop-filter: none; -webkit-backdrop-filter: none; color: #FFFDF8; border-color: transparent; text-shadow: 0 1px 3px rgba(0,0,0,.35); }
-.nav.light .brand .word small { color: color-mix(in srgb, var(--paper) 88%, transparent); }
 .nav.light .brand .mark { filter: drop-shadow(0 1px 3px rgba(0,0,0,.4)); }
 .nav.light ul a { color: color-mix(in srgb, var(--paper) 92%, transparent); font-weight: 600; } .nav.light ul a:hover { color: var(--paper); }
 .nav.light .cta .btn-ink { background: var(--paper); color: var(--ink); }
@@ -267,10 +265,9 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 /* Footer */
 .foot { background: var(--ink); color: color-mix(in srgb, var(--paper) 70%, transparent); padding-block: clamp(48px, 6vw, 80px) 32px; }
 .foot .top { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); column-gap: 32px; row-gap: 36px; align-items: start; }
-.foot .brand { grid-column: 1 / span 4; align-items: flex-start; }
-.foot .brand .mark { filter: none; width: 48px; height: 48px; }
+.foot .brand { grid-column: 1 / span 4; }
+.foot .brand .mark { filter: none; width: 40px; height: 40px; }
 .foot .brand .word { color: var(--paper); }
-.foot .brand .word small { color: color-mix(in srgb, var(--paper) 50%, transparent); }
 .foot .col { display: grid; gap: 10px; font-size: .92rem; align-content: start; }
 .foot .col .eyebrow { color: color-mix(in srgb, var(--paper) 45%, transparent); margin-bottom: 6px; }
 .foot .col a:hover { color: var(--paper); }
@@ -311,6 +308,8 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 }
 @media (max-width: 720px) {
   body { font-size: 1rem; }
+  .brand .word { font-size: 1.55rem; }
+  .brand .mark { width: 32px; height: 32px; }
   .hero { min-height: min(100svh, 900px); }
   .hero .inner { padding-top: 140px; }
   .hero .strip { flex-direction: column; align-items: flex-start; }
@@ -344,7 +343,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
     <div class="bar">
       <a class="brand" href="#top" aria-label="PG Customs home">
         <img class="mark" src="media/logo-white.png" alt="" width="36" height="36">
-        <span class="word">PG Customs<small>Gardnerville, Nevada</small></span>
+        <span class="word">PG Customs</span>
       </a>
       <nav aria-label="Primary">
         <ul>
@@ -607,7 +606,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
     <div class="top">
       <a class="brand" href="#top">
         <img class="mark" src="media/logo-white.png" alt="PG Customs horseshoe mark" width="48" height="48">
-        <span class="word">PG Customs<small>Decks, remodels &amp; custom woodwork</small></span>
+        <span class="word">PG Customs</span>
       </a>
       <div class="col c1">
         <p class="eyebrow">Site</p>
