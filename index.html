@@ -138,7 +138,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
 .hero .meta { grid-column: 8 / span 5; align-self: end; font-size: .9rem; color: color-mix(in srgb, var(--paper) 92%, transparent); text-shadow: 0 1px 3px rgba(0,0,0,.35); display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; border-top: 1px solid rgba(238,235,228,.22); padding-top: 16px; }
 .hero .meta dt { color: color-mix(in srgb, var(--paper) 68%, transparent); } .hero .meta dd { margin: 0; }
 .hero .meta .link { border-color: rgba(238,235,228,.35); } .hero .meta .link:hover { border-color: var(--paper); }
-.hero .strip { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid rgba(238,235,228,.18); padding-top: 14px; font-size: .82rem; color: color-mix(in srgb, var(--paper) 55%, transparent); }
+.hero .strip { grid-column: 1 / -1; display: flex; justify-content: flex-end; align-items: center; gap: 16px; flex-wrap: wrap; border-top: 1px solid rgba(238,235,228,.18); padding-top: 14px; font-size: .82rem; color: color-mix(in srgb, var(--paper) 55%, transparent); }
 .hero .strip b { color: color-mix(in srgb, var(--paper) 82%, transparent); font-weight: 500; }
 .vid-toggle { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1px solid rgba(238,235,228,.3); color: inherit; border-radius: 999px; padding: 7px 12px 7px 11px; font: inherit; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: border-color .2s, color .2s; }
 .vid-toggle:hover { border-color: var(--paper); color: var(--paper); }
@@ -378,25 +378,23 @@ section { padding-block: clamp(72px, 10vw, 150px); }
       <source src="media/hero-loop-small.mp4" type="video/mp4">
     </video>
     <div class="wrap inner">
-      <p class="eyebrow"><span>Home projects done right</span><span>Carson Valley · Lake Tahoe</span></p>
+      <p class="eyebrow"><span>Carson Valley · Lake Tahoe</span></p>
       <h1>The home project you have been meaning to do. Done right.</h1>
       <div class="side">
-        <p class="lede">The deck that is past saving, the pergola over the hot tub, the room that never got finished, the fix nobody else wants to touch. Phil Gielow builds it, rebuilds it or brings it to life, himself, the right way, from his family's ranch in Carson Valley.</p>
+        <p class="lede">Decks, pergolas, remodels, repairs. Whatever you have been putting off, Phil Gielow builds it or fixes it himself, the right way.</p>
         <div class="actions">
           <a class="btn btn-paper" href="#contact">Get a quote</a>
           <a class="btn btn-ghost" href="#work">See the work</a>
         </div>
       </div>
       <dl class="meta">
-        <dt>Based</dt><dd>Gardnerville, NV, on the Gielow family ranch</dd>
-        <dt>Serving</dt><dd>Carson Valley, the Tahoe Basin and Northern Nevada</dd>
+        <dt>Serving</dt><dd>Carson Valley, Lake Tahoe and Northern Nevada</dd>
         <dt>Reach Phil</dt><dd><a class="link" href="tel:+17757210590">(775) 721-0590</a></dd>
       </dl>
       <div class="strip">
-        <span><b>From Phil's film.</b> The ranch, the shop and the pieces, Carson Valley, Nevada.</span>
         <button class="vid-toggle" id="vid-toggle" type="button" aria-controls="hero-video">
-          <span class="on"><svg viewBox="0 0 10 10" aria-hidden="true"><rect x="1" y="1" width="3" height="8"/><rect x="6" y="1" width="3" height="8"/></svg>Pause film</span>
-          <span class="off"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z"/></svg>Play film</span>
+          <span class="on"><svg viewBox="0 0 10 10" aria-hidden="true"><rect x="1" y="1" width="3" height="8"/><rect x="6" y="1" width="3" height="8"/></svg>Pause</span>
+          <span class="off"><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z"/></svg>Play</span>
         </button>
       </div>
     </div>
@@ -442,7 +440,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
         </figure>
       </div>
       <div class="more">
-        <p>If there is something about your house you have been meaning to change, send a photo of it as it stands. Phil will come take a look and tell you straight what it takes to do it right.</p>
+        <p>Something about the house you have been meaning to change? Send a photo. Phil will come take a look.</p>
         <a class="btn btn-line" href="#contact">Request a site visit</a>
       </div>
     </div>
@@ -453,31 +451,31 @@ section { padding-block: clamp(72px, 10vw, 150px); }
       <div class="sec-head">
         <p class="eyebrow">Services</p>
         <h2>Whatever you have been wanting to do, inside or out.</h2>
-        <p class="aside">A deck that is past saving, a backyard that needs a pergola, a room that never got finished, a repair nobody else wants to touch. Phil takes the whole list, outside and in, and does it right the first time.</p>
+        <p class="aside">The deck, the pergola, the room that never got finished, the repair nobody else wants to touch. Phil takes the whole list and does it right.</p>
       </div>
       <div class="svc">
         <article class="reveal">
           <p class="eyebrow">Decks &amp; outdoor living</p>
           <h3>Decks, pergolas and the backyard you pictured</h3>
-          <p>New decks, full tear-outs and rebuilds, repairs and waterproofing that actually holds. Pergolas over hot tubs, privacy screens and the outdoor room you have been sketching on napkins, framed to carry snow and shrug off sun.</p>
+          <p>New decks, tear-outs and rebuilds, repairs and waterproofing. Pergolas, privacy screens and outdoor rooms, framed to carry snow and shrug off sun.</p>
           <ul><li>New decks, rebuilds and repairs</li><li>Waterproofing and refinishing</li><li>Pergolas, screens and hot tub surrounds</li></ul>
         </article>
         <article class="reveal">
           <p class="eyebrow">Remodels &amp; additions</p>
           <h3>Remodels, built-ins and the fixes on the list</h3>
-          <p>Room remodels and additions, finish carpentry and trim, shelving and built-ins fitted to the wall, veneer and restoration work, and the repairs that have been on the list for years. The work that makes a house feel finished.</p>
+          <p>Remodels and additions, finish carpentry and trim, built-ins fitted to the wall, and the repairs that have been on the list for years.</p>
           <ul><li>Additions and room remodels</li><li>Finish carpentry, built-ins and shelving</li><li>Repairs, restoration and veneer work</li></ul>
         </article>
         <article class="reveal">
           <p class="eyebrow">Custom furniture</p>
           <h3>Tables, beds and desks to match</h3>
-          <p>When the room is done and needs the piece to go with it: farmhouse and Viking-inspired dining tables, solid-wood bed frames and chevron headboards, consoles and desks. Built in the shop on the ranch to suit the room they are going in.</p>
+          <p>When the room needs the piece to go with it: dining tables, bed frames and headboards, consoles and desks, built in the shop on the ranch.</p>
           <ul><li>Dining and trestle tables</li><li>Bed frames and headboards</li><li>Consoles, desks and benches</li></ul>
         </article>
       </div>
       <div class="also">
         <p class="eyebrow">Also</p>
-        <p>Restoring existing structures, the site work that comes with a build (drainage, sump pumps, the small fixes while he is there), and one-off pieces for the room once the project is done. If it is something you have been wanting done to the house, ask. If Phil cannot do it right, he will tell you who can.</p>
+        <p>Restoration, drainage and the small fixes while he is there. If it belongs in or around a home, ask.</p>
       </div>
     </div>
   </section>
@@ -487,13 +485,13 @@ section { padding-block: clamp(72px, 10vw, 150px); }
       <div class="sec-head">
         <p class="eyebrow">Process</p>
         <h2>How a job gets done right.</h2>
-        <p class="aside">You deal with Phil from the first site visit to the final walk-through. No sales team, no crew of strangers sent in his place, and it is not done until it is done right.</p>
+        <p class="aside">Phil, from the first site visit to the final walk-through. No sales team, no crew of strangers.</p>
       </div>
       <ol class="steps">
-        <li class="reveal"><span class="num">1</span><h3>Site visit</h3><p>Phil comes out, looks at what you have and what you have been wanting, measures, and tells you straight what it will take. A photo or two is enough to book it.</p></li>
-        <li class="reveal"><span class="num">2</span><h3>Written quote</h3><p>Phil works up the layout, materials and finish with you and gives you a clear written quote and timeline before anything is ordered or cut.</p></li>
-        <li class="reveal"><span class="num">3</span><h3>The build</h3><p>Decks, pergolas, remodels and built-ins are built on site, with the job kept clean and moving. Furniture is built in the shop on the ranch. Either way you see progress as it happens.</p></li>
-        <li class="reveal"><span class="num">4</span><h3>Final walk-through</h3><p>Phil walks you through the finished work, covers how to care for it, and does not call it done until you do.</p></li>
+        <li class="reveal"><span class="num">1</span><h3>Site visit</h3><p>Phil comes out, looks at what you have, measures, and tells you straight what it will take.</p></li>
+        <li class="reveal"><span class="num">2</span><h3>Written quote</h3><p>Layout, materials and finish agreed with you, then a written quote and timeline before anything is cut.</p></li>
+        <li class="reveal"><span class="num">3</span><h3>The build</h3><p>Decks, pergolas and remodels are built on site, kept clean and moving. Furniture is built in the shop on the ranch.</p></li>
+        <li class="reveal"><span class="num">4</span><h3>Final walk-through</h3><p>Phil walks you through the finished work and does not call it done until you do.</p></li>
       </ol>
       <div class="film">
         <a class="player reveal" id="film" href="https://www.youtube.com/watch?v=XnMLmF_CteQ" target="_blank" rel="noopener" aria-label="Watch the PG Customs film on YouTube">
@@ -503,7 +501,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
         <div class="copy">
           <p class="eyebrow">The film</p>
           <h3>The ranch, the shop and the work.</h3>
-          <p>A few minutes with Phil on where PG Customs comes from, how he approaches a job and why the details matter.</p>
+          <p>A few minutes with Phil on where PG Customs comes from and why the details matter.</p>
         </div>
       </div>
     </div>
@@ -564,7 +562,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
         <div class="intro">
           <p class="eyebrow">Get a quote</p>
           <h2>What have you been wanting to do?</h2>
-          <p>A deck to rebuild, a pergola over the hot tub, a room to finish, a fix that has been on the list for years. A photo and a rough idea is enough to set up a site visit and a written quote. Phil answers every message himself.</p>
+          <p>A photo and a rough idea is enough for a site visit and a written quote. Phil answers every message himself.</p>
           <div class="direct">
             <div><small>Email</small><a href="mailto:phil@pgcustommade.com?subject=Start%20My%20Project%20with%20PG%20Customs">phil@pgcustommade.com</a></div>
             <div><small>Call or text</small><a href="tel:+17757210590">(775) 721-0590</a></div>
@@ -591,7 +589,7 @@ section { padding-block: clamp(72px, 10vw, 150px); }
           <div class="field"><label for="f-msg">What have you been meaning to do?</label><textarea id="f-msg" name="message" rows="4" placeholder="What is there now, what you want it to be, rough size, timing…"></textarea></div>
           <div class="submit">
             <button class="btn btn-ink" type="submit">Request a quote</button>
-            <span class="note">Opens an email to phil@pgcustommade.com with your note filled in.</span>
+            <span class="note">Opens an email to Phil with your note filled in.</span>
           </div>
           <p class="sent">Your email should have opened in your mail app. If it did not, write to <a class="link" href="mailto:phil@pgcustommade.com">phil@pgcustommade.com</a> or call <a class="link" href="tel:+17757210590">(775) 721-0590</a>.</p>
         </form>
